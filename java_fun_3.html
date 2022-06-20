@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let add7 = (n) => console.log(n + 7);
+        add7(1);
+
+        function multiply(a, b) {
+            console.log(a * b)
+        };
+        multiply(4, 5);
+
+        let capitalize = (a) => {
+            let result1 = (a.toUpperCase()).substring(0, 1)
+            let result2 = (a.toLowerCase()).substring(1)
+            console.log(result1+result2)
+        };
+        capitalize ('THiS ShIt Is gAy.')
+        
+        let lastLetter = function(a) {
+            console.log(a.substring(a.length - 1))
+        };
+        lastLetter('abcdefg');
+
+        function() {
+            console.log('anonymous function')
+        };
+    </script>
+</body>
+</html>
