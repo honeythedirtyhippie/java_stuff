@@ -1,7 +1,6 @@
 //global variables
 let userScore = 0;
 let computerScore = 0;
-let totalScore = userScore + computerScore 
 let compChoice;
 let result;
 let userChoice;
@@ -33,36 +32,51 @@ let eachRound = (userChoice, compChoice) => {
     if (userChoice === "rock" && compChoice === "paper") {
         computerScore++;
         return result = (`You lose ${compChoice} beats ${userChoice}`);
+        console.log(result);
     }
     else if (userChoice === "paper" && compChoice === "scissors") {
         computerScore++;
         return result = (`You lose ${compChoice} beats ${userChoice}`);
+        console.log(result);
     }
     else if (userChoice === "scissors" && compChoice === "rock") {
         computerScore++;
         return result = (`You lose ${compChoice} beats ${userChoice}`);
+        console.log(result);
     }
     else if (userChoice === compChoice) {
         return result = (`You both chose ${compChoice}, it's a tie.`);
+        console.log(result);
     }
     else if (userChoice === "rock" && compChoice === "scissors") {
         userScore++;
         return result = (`${userChoice} beats ${compChoice}, you win!`);
+        console.log(result);
     }
     else if (userChoice === "paper" && compChoice === "rock") {
         userScore++;
         return result = (`${userChoice} beats ${compChoice}, you win!`);
+        console.log(result);
     }
     else if (userChoice === "scissors" && compChoice === "paper") {
         userScore++;
         return result = (`${userChoice} beats ${compChoice}, you win!`);
+        console.log(result);
     }
     else {
         return result = (`input error: ${userChoice}`)
+        console.log(result);
     }
-}
+};
 
-eachRound(userPrompt(), compPrompt())
-console.log(`${result}
-user: ${userScore}
-comp: ${computerScore}`)
+game = function() {
+    for(userScore = 0, computerScore = 0; (userScore+computerScore)<5;) {
+        eachRound(userPrompt(), compPrompt());
+        console.log(`${result}
+        user: ${userScore}
+        comp: ${computerScore}
+        total: ${userScore+computerScore}`);
+    }    
+};
+
+game();
