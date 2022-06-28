@@ -54,15 +54,43 @@
         alert(`Hello ${name}, nice to see you!`);
        }
 
-       button.addEventListener("click", greet)
+        button.addEventListener("click", greet)
        
-       paper = 
-       console.log("paper" > "rock")
+        const cats = ['Leopard', 'Serval', 'Jaguar', 'Tiger', 'Caracal', 'Lion'];
+        //for...of loop 
+        for (const cat of cats) { //assigns first item from cats array to var cat
+            console.log(cat);      //runs code in curly brackets, then repeats process til end of collection.
+        }
+
+        for (let i = 0; i < cats.length; i++) { //the above for...of loop is the shorter/more concise way to write this for loop.
+            console.log(cats[i]);
+        }
+
     
+        let catCalled = "My favorite cats include: "
+        for (let i=0;i < cats.length; i++) {
+            if (i=== cats.length -1) {
+                catCalled += `and ${cats[i]}.`
+            }   else {
+                catCalled += `${cats[i]}, `
+            }
+        }    
+        console.log(catCalled)
 
-
-
-
+        //this is using a while loop to do the same thing the for loop does above
+        let i = 0;
+        let catCalled1 = "My favorite cats include: " //define intitialization and variables first
+        while (i < cats.length) {
+            if (i === cats.length - 1) {
+                catCalled1 += `and ${cats[i]}.`;
+            } else {
+                catCalled1 += `${cats[i]}, `;
+            }
+            i++; //final expression is here instaed of in () like for loop.
+        }
+        console.log(catCalled1);
+        //don't forget about the do...while loop. it and other examples can be found below.
+        //other great loop examples can be found at: https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Looping_code
 
 
     </script>
